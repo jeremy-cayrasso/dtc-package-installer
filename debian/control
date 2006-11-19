@@ -1,0 +1,14 @@
+Source: dtc-package-installer
+Section: admin
+Priority: optional
+Maintainer: Thomas Goirand <thomas@goirand.fr>
+Build-Depends: debhelper (>= 4), po-debconf
+Standards-Version: 3.7.2
+
+Package: dtc-package-installer
+Architecture: all
+Depends: dtc-postfix-courier | dtc
+Description: Adds package installer apps to DTC
+ This is a collection of apps that are done for
+ the package installer of DTC.
+ See http://www.gplhost.com/software-dtc.html for more details

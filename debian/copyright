@@ -1,0 +1,34 @@
+This package was debianized by Thomas Goirand <thomas@goirand.fr> on
+Sat,  9 Apr 2005 21:54:10 +0200.
+
+It was downloaded from:
+cvs -d :pserver:anonymous@gplhost.com:/var/lib/cvs export -D today dtc-package-installer
+
+Upstream Author: Thomas Goirand <thomas@goirand.fr>
+
+License (*/dtc-pkg-info.php  */dtc-pkg-install.php):
+
+	Copyright (C) Thomas Goirand <thomas@goirand.fr>
+	Copyright (C) GPLHost LLC <info@gplhost.com>
+
+	This library is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Lesser General Public
+	License as published by the Free Software Foundation; either
+	version 2 of the License, or (at your option) any later version.
+
+	This library is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+	Lesser General Public License for more details.
+
+	You should have received a copy of the GNU Lesser General Public
+	License along with this library; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+
+License (all the software collection):
+
+	All software provided by this package are provided as-is,
+	with no guarantee in security and so on. They all are
+	open source or at least free to use, but you they also are
+	Copyright (C) to theire respective authors. See indiviual
+	software for license and copyrights.

@@ -1,0 +1,5 @@
+dtc-package-installer (0.24.6-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Mon, 13 Nov 2006 03:11:17 +0800
