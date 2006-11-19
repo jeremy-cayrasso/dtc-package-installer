@@ -1,1 +1,12 @@
-shared/package-installer usr/share/dtc/shared
+drupal usr/share/dtc/shared/package-installer
+joomla usr/share/dtc/shared/package-installer
+oscommerce usr/share/dtc/shared/package-installer
+phpbb usr/share/dtc/shared/package-installer
+phpsurveyor usr/share/dtc/shared/package-installer
+vtiger usr/share/dtc/shared/package-installer
+horde usr/share/dtc/shared/package-installer
+joomla_pl usr/share/dtc/shared/package-installer
+oscommerce-creloaded usr/share/dtc/shared/package-installer
+phpnuke usr/share/dtc/shared/package-installer
+smf usr/share/dtc/shared/package-installer
+wanewsletter usr/share/dtc/shared/package-installer
