@@ -1,7 +1,7 @@
 <?php
 /**
  * @package DTC
- * @version  $Id: dtc-pkg-info.php,v 1.1 2006/11/19 14:09:24 thomas Exp $
+ * @version  $Id: dtc-pkg-info.php,v 1.1.1.1 2006/11/19 14:09:24 thomas Exp $
  * 
  */
 $pkg_info = array(

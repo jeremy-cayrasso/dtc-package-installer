@@ -3,7 +3,7 @@
  * Enter description here...
  * @package DTC 
  * @name 
- * @version $Id: dtc-pkg-install.php,v 1.1 2006/11/19 14:09:51 thomas Exp $
+ * @version $Id: dtc-pkg-install.php,v 1.1.1.1 2006/11/19 14:09:51 thomas Exp $
  * @return unzip alerts
  */
 
