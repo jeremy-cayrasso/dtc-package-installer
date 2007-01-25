@@ -2,14 +2,14 @@
 
 $pkg_info = array(
   "name" => "Vtiger",
-  "version" => "5-Beta",
+  "version" => "5.0.2",
   "short_desc" => "A fully featured Customer Relationship Management system",
   "long_desc" => "Vtiger is a high powered, fully scalable, and highly customizable
   Open Source Customer Relationship Management system. Vtiger has a user-friendly interface, simple
   and straightforward administration panel, and helpful FAQ. Based on the powerful
   PHP server language and MySQL database server,
   Vtiger is the ideal free community solution for managing customer relationships.",
-  "unpack_disk_usage" => "18170226",
+  "unpack_disk_usage" => "19924907",
 
   "need_database" => "yes",
   "sql_script" => "no",
@@ -30,7 +30,7 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.gz",
-  "file" => "vtigercrm-5.0.0.tar.gz",
+  "file" => "vtigercrm-5.0.2.tar.gz",
   "resulting_dir" => "vtigercrm",
   "renamedir_to" => "crm");
 

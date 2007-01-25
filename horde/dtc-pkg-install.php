@@ -17,7 +17,7 @@ function do_package_install(){
   global $pkg_info;
   global $dtcpkg_db_login;
 
-  $package_installer_console .= "=> Starting phpBB Installer for PHPBB 3.0.4<br>";
+  $package_installer_console .= "=> Starting phpBB Installer for Horde 3.1.3<br>";
 
   return 0;     // Ok, no problem ! :)
 }

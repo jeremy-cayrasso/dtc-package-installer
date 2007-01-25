@@ -2,7 +2,7 @@
 
 $pkg_info = array(
   "name" => "PHP-Nuke",
-  "version" => "7.7",
+  "version" => "7.9",
   "short_desc" => "PHP-Nuke is a Web Portal System, storytelling software, News system,
   online community or whatever you want to call it.",
   "long_desc" => "PHP-Nuke is a Web Portal System, storytelling software, News system,
@@ -21,7 +21,7 @@ $pkg_info = array(
   Comments option in Polls, lot of themes, Ephemerids manager, File Manager, Headlines,
   download manager, faq manager, advanced blocks systems, reviews system, newsletter,
   categorized articles, multilanguage content management, phpBB Forums included and a lot more.",
-  "unpack_disk_usage" => "14272973",
+  "unpack_disk_usage" => "16035053",
 
   "need_database" => "yes",
   "sql_script" => "no",
@@ -43,7 +43,7 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.gz",
-  "file" => "phpnuke-7.7.tar.gz",
+  "file" => "PHP-Nuke-7.9.tar.gz",
   "resulting_dir" => "phpnuke",
   "renamedir_to" => "phpnuke");
 

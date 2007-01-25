@@ -2,7 +2,7 @@
 
 $pkg_info = array(
   "name" => "osCommerce-creloaded",
-  "version" => "6.15",
+  "version" => "6.2",
   "short_desc" => "Highly patched osCommerce Open Source E-Commerce Solutions",
   "long_desc" => "osCommerce is the leading Open Source online
   shop e-commerce solution that is available for free under the
@@ -11,7 +11,7 @@ $pkg_info = array(
   store owners to setup, run, and maintain their online stores
   with minimum effort and with no costs, license fees, or limitations involved.
   This version take many contributions and adds it to osCommerce.",
-  "unpack_disk_usage" => "14610888",
+  "unpack_disk_usage" => "22128668",
 
   "need_database" => "yes",
   "sql_script" => "no",
@@ -34,7 +34,7 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.gz",
-  "file" => "oscommerce-creloaded_6.15-1.tar.gz",
+  "file" => "creloaded62standard.tar.gz",
   "resulting_dir" => "catalog",
   "renamedir_to" => "catalog");
 

@@ -3,7 +3,7 @@
  * Enter description here...
  * @package DTC 
  * @name 
- * @version $Id: dtc-pkg-install.php,v 1.1 2006/11/19 14:09:51 thomas Exp $
+ * @version $Id: dtc-pkg-install.php,v 1.2 2007/01/25 00:39:10 indivision Exp $
  * @return unzip alerts
  */
 
@@ -30,7 +30,7 @@ function do_package_install(){
   global $pkg_info;
   global $dtcpkg_db_login;
 
-  $package_installer_console .= "=> Startujemy z instalacja Joomla 1.0.10 PL<br/>";
+  $package_installer_console .= "=> Startujemy z instalacja Joomla 1.0.11 PL<br/>";
   $admin_path = getAdminPath($adm_login);
   $vhost_path = $admin_path."/".$edit_domain."/subdomains/".$_REQUEST["subdomain"]."/html";
   $hostname = $_REQUEST["subdomain"].".".$edit_domain;

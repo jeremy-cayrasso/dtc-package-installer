@@ -13,7 +13,7 @@
 
 $pkg_info = array(
   "name" => "Horde",
-  "version" => "3.0.4",
+  "version" => "3.1.3",
   "short_desc" => "The horde web application framework",
   "long_desc" => "The Horde Framework is the glue that all
   Horde applications have in common. It is many things,
@@ -21,7 +21,7 @@ $pkg_info = array(
   inter-application communication. The shared code provides
   common ways of handling things like preferences, permissions,
   browser detection, user help, and more.",
-  "unpack_disk_usage" => "13554978",
+  "unpack_disk_usage" => "19250814",
 
   "need_database" => "yes",
   "sql_script" => "yes",
@@ -43,8 +43,8 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.gz",
-  "file" => "horde-3.0.4.tar.gz",
-  "resulting_dir" => "horde-3.0.4",
+  "file" => "horde-3.1.3.tar.gz",
+  "resulting_dir" => "horde-3.1.3",
   "renamedir_to" => "horde");
 
 ?>

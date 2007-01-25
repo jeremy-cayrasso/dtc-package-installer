@@ -1,5 +1,5 @@
-This package was debianized by Thomas Goirand <thomas@goirand.fr> on
-Sat,  9 Apr 2005 21:54:10 +0200.
+This package was debianized by D Meertins <packages@indivision.nl> on
+Mon, 22 Jan 2007 23:55:05 +0100.
 
 It was downloaded from:
 cvs -d :pserver:anonymous@gplhost.com:/var/lib/cvs export -D today dtc-package-installer
@@ -25,10 +25,10 @@ License (*/dtc-pkg-info.php  */dtc-pkg-install.php):
 	License along with this library; if not, write to the Free Software
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
-License (all the software collection):
+License (Of included software collection):
 
 	All software provided by this package are provided as-is,
-	with no guarantee in security and so on. They all are
-	open source or at least free to use, but you they also are
-	Copyright (C) to theire respective authors. See indiviual
-	software for license and copyrights.
+	with no guarantee in security and so on. All packages included are
+	released under various licenses allowing at least free usage/distribution.
+	All Copyrights (C) belong to their respective authors. See indiviual
+	software documentation for details on license and copyright.

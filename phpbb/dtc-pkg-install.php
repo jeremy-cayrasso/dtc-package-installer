@@ -23,7 +23,7 @@ function do_package_install(){
   global $pkg_info;
   global $dtcpkg_db_login;
 
-  $package_installer_console .= "=> Starting phpBB Installer for PHPBB 2.0.17<br>";
+  $package_installer_console .= "=> Starting phpBB Installer for PHPBB 2.0.22<br>";
   $admin_path = getAdminPath($adm_login);
   $vhost_path = $admin_path."/".$edit_domain."/subdomains/".$_REQUEST["subdomain"]."/html";
   $hostname = $_REQUEST["subdomain"].".".$edit_domain;

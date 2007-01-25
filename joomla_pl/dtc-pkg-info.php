@@ -1,15 +1,15 @@
 <?php
 /**
  * @package DTC
- * @version  $Id: dtc-pkg-info.php,v 1.1 2006/11/19 14:09:51 thomas Exp $
+ * @version  $Id: dtc-pkg-info.php,v 1.2 2007/01/25 00:39:10 indivision Exp $
  * 
  */
 $pkg_info = array(
   "name" => "Joomla",
-  "version" => "1.0.10",
+  "version" => "1.0.11",
   "short_desc" => "Ca³kiem prosty w obs³udze lecz rozbuowany CMS. 
   Polskie centrum joomla znajduje siê pod adresem http://www.joomla.pl/",
-  "unpack_disk_usage" => "18900",
+  "unpack_disk_usage" => "8922910",
 
   "need_database" => "yes",
   "sql_script" => "no",
@@ -30,7 +30,7 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.bz2",
-  "file" => "Joomla_1.0.10_rev2.tar.bz2",
+  "file" => "joomla_1011+Admin-pl.tar.bz2",
   "resulting_dir" => "",
   "renamedir_to" => "");
 
