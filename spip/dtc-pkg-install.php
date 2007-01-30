@@ -30,7 +30,7 @@ function do_package_install(){
   $hostname = $_REQUEST["subdomain"].".".$edit_domain;
   $vhost_url = "http://$hostname/";
 
-  $package_installer_console .= "Please go to <a target=\"_blank\" href=\"$vhost_url".$_REQUEST["dtcpkg_directory"]."\">the package original installer</a> to finish your installation<br>";
+  $package_installer_console .= "Please go to <a target=\"_blank\" href=\"$vhost_url".$_REQUEST["dtcpkg_directory"]."/ecrire/\">the package original installer</a> to finish your installation<br>";
 
   $cmd = "mv ".$vhost_path."/".$pkg_info["directory"]." ".$vhost_path."/".$_REQUEST["dtcpkg_directory"];
 /*
