@@ -25,7 +25,7 @@ function do_package_install(){
   global $pkg_info;
   global $dtcpkg_db_login;
 
-  $package_installer_console .= "=> Starting Drupal Installer for Drupal 5.0<br>";
+  $package_installer_console .= "=> Starting Drupal Installer for Drupal 5.1<br>";
   $admin_path = getAdminPath($adm_login);
   $vhost_path = $admin_path."/".$edit_domain."/subdomains/".$_REQUEST["subdomain"]."/html";
   $hostname = $_REQUEST["subdomain"].".".$edit_domain;
@@ -35,7 +35,7 @@ function do_package_install(){
 
   //inserting the database dump
   $mysql_ver = mysql_get_server_info(); //i must add different db schemas for different mysql version
-  $package_installer_console .= "=> Inserting the Drupal 5.0 database schemas for you MySQL: ".$mysql_ver."<br>";
+  $package_installer_console .= "=> Inserting the Drupal 5.1 database schemas for you MySQL: ".$mysql_ver."<br>";
   if (ereg('^4.0', $mysql_ver)) {
   $db_name = 'database.4.0.mysql';
   }else{
@@ -45,7 +45,7 @@ function do_package_install(){
   exec($database);
   
   //update the drupal config file
-  $package_installer_console .= "=> Changing Drupal Drupal 5.0 configuration file...<br>";
+  $package_installer_console .= "=> Changing Drupal Drupal 5.1 configuration file...<br>";
   if($_REQUEST["dtcpkg_directory"] == ""){
     $dest_dir = $vhost_path;
   }else{

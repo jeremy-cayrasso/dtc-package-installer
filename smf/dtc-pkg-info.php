@@ -2,14 +2,14 @@
 
 $pkg_info = array(
   "name" => "SMF",
-  "version" => "1.1.1",
+  "version" => "1.1.2",
   "short_desc" => "A fully featured Forum offering",
   "long_desc" => "CMF is a high powered, fully scalable, and highly customizable
   Open Source forum system. CMF has a user-friendly interface, simple
   and straight forward administration panel, and helpful FAQ. Based on the powerful
   PHP server language and your choice of MySQL, MS-SQL, PostgreSQL or Access/ODBC
   database servers, CMF is the ideal free community solution to build your online community.",
-  "unpack_disk_usage" => "5422474",
+  "unpack_disk_usage" => "5438330",
 
   "need_database" => "yes",
   "sql_script" => "no",
@@ -30,7 +30,7 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.bz2",
-  "file" => "smf_1-1-1_install.tar.bz2",
+  "file" => "smf_1-1-2_install.tar.bz2",
   "resulting_dir" => "smf",
   "renamedir_to" => "smf");
 

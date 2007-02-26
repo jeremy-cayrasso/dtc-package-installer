@@ -2,10 +2,10 @@
 
 $pkg_info = array(
   "name" => "Drupal",
-  "version" => "5.0",
+  "version" => "5.1",
   "short_desc" => "Drupal is one of more used CMS on the world.",
   "long_desc" => "Drupal is software that allows an individual or a community of users to easily publish, manage and organize a great variety of content on a website. Tens of thousands of people and organizations have used Drupal to set up scores of different kinds of web sites.",
-  "unpack_disk_usage" => "2248095",
+  "unpack_disk_usage" => "2251093",
 
   "need_database" => "yes",
   "sql_script" => "no",
@@ -27,8 +27,8 @@ $pkg_info = array(
   "install_script_url" => "install.php",
 
   "unpack_type" => "tar.gz",
-  "file" => "drupal-5.0.tar.gz",
-  "resulting_dir" => "drupal-5.0",
+  "file" => "drupal-5.1.tar.gz",
+  "resulting_dir" => "drupal-5.1",
   "renamedir_to" => "drupal");
 
 ?>
