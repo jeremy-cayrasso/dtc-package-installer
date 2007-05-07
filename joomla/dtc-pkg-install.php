@@ -3,7 +3,7 @@
  * Enter description here...
  * @package DTC 
  * @name 
- * @version $Id: dtc-pkg-install.php,v 1.2 2007/01/25 00:39:10 indivision Exp $
+ * @version $Id: dtc-pkg-install.php,v 1.3 2007/05/07 19:03:12 indivision Exp $
  * @return unzip alerts
  */
 
@@ -34,19 +34,27 @@ function do_package_install(){
   $admin_path = getAdminPath($adm_login);
   $vhost_path = $admin_path."/".$edit_domain."/subdomains/".$_REQUEST["subdomain"]."/html";
   $hostname = $_REQUEST["subdomain"].".".$edit_domain;
-  $vhost_url = "http://$hostname/";
+  $vhost_url = "http://$hostname";
 
-  $cmd = "mv ".$vhost_path."/".$pkg_info["directory"]." ".$vhost_path."/".$_REQUEST["dtcpkg_directory"];
+  //$cmd = "mv ".$vhost_path."/".$pkg_info["directory"]." ".$vhost_path."/".$_REQUEST["dtcpkg_directory"];
 
   $data = array();
   $data["lang"] = "english";
   $data["dbms"] = "mysql4";
   $data["upgrade"] = "0";
-  $data["dbhost"] = "localhost";
-  $data["dbname"] = $_REQUEST["database_name"];
-  $data["dbuser"] = $dtcpkg_db_login;
-  $data["dbpasswd"] = $_REQUEST["dtcpkg_db_pass"];
-  $data["prefix"] = "cms_";
+  $data["DBhostname"] = "localhost";
+  $data["DBname"] = $_REQUEST["database_name"];
+  $data["DBuserName"] = $dtcpkg_db_login;
+  $data["DBpassword"] = $_REQUEST["dtcpkg_db_pass"];
+  $data["DBPrefix"] = "cms_";
+  $data["sitename"] = "DTC Joomla site";
+  $data["adminEmail"] = $_REQUEST["dtcpkg_email"];
+  $data["adminPassword"] = $_REQUEST["dtcpkg_pass"];
+  $data["absolutePath"] = $vhost_path;
+  $data["siteUrl"] = $vhost_url;
+  $data["DBSample"] = '1';
+  $data["DBDel"] = '1';
+  $data["DBBackup"] = '0';
   $data["board_email"] = $_REQUEST["dtcpkg_email"];
   $data["server_name"] = $hostname;
   $data["server_port"] = "80";
@@ -56,15 +64,44 @@ function do_package_install(){
   $data["install_step"] = "1";
   $data["cur_lang"] = "english";
 
-  $url = $vhost_url.$_REQUEST["dtcpkg_directory"]."/".$pkg_info["post_script_url"];
+  #$url = $vhost_url."/".$_REQUEST["dtcpkg_directory"]."/".$pkg_info["post_script_url"];
 
-//  print_r($data);
-  $package_installer_console .= "=> Calling $url<br>";
-  $ret = HTTP_Post($url,$data, $url);
-  $weblines = explode("\n",$ret);
-// HTTP/1.1 200 OK
-  $package_installer_console .= "=> Script returns: ".$weblines[0];
+  // For some reason, Joomla has to be done in 2 steps.
+  // install2.php does the database import.
+  // install4.php does the rest of the configuration.
+
+  $url = $vhost_url."/".$pkg_info["post_script_url"];
+  $package_installer_console .= "=> Calling $url<br/>";
+  $ret = str_replace("document","url",HTTP_Post($url,$data, $url));
+
+  // Do the database import.
+  if ( is_numeric(strpos($ret,"SUCCESS!")) )
+    $package_installer_console .= "=> Database has been populated.<br/>";
+  else
+  {
+    $package_installer_console .= "=> Database has failed import, check credentials.<br/>";
+    return 1;
+  }
+
+  // Do the rest of the configuration, this writes the "configuration.php" file
+  $url = $vhost_url."/".$pkg_info["install_script_url"];
+  $package_installer_console .= "=> Calling $url<br/>";
+  $ret = str_replace("document","url",HTTP_Post($url,$data, $url));
+
+// Congrates message is a good sign ;)
+  if ( is_numeric(strpos($ret,"Congratulations! Joomla! is installed")) )
+  {
+    $package_installer_console .= "=> URL return with good results.<br/>";
+  }
+  else
+  {
+    // Otherwise, Ouch!.
+    $package_installer_console .= "=> Installation Failed! Check your parameters.<br/>";
+    $package_installer_console .= $ret;
+    return 1;
+  }
+
   return 0;     // Ok, no problem ! :)
 }
-
 ?>
+
