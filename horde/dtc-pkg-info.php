@@ -20,7 +20,13 @@ $pkg_info = array(
   including some coding standards, common code, and
   inter-application communication. The shared code provides
   common ways of handling things like preferences, permissions,
-  browser detection, user help, and more.",
+  browser detection, user help, and more.<br>
+  Note that the following package MUST be installed in your
+  system in order to be able to install this package:<br>
+  php-log php-mail-mime php-xml-serializer php-http-request
+  php-date php-db php-mail php5-ldap php-net-ldap php-net-imap
+  php5-imap php-file php-http php-net-smtp php-auth-sasl php-pear
+  php-services-weather php-cache php5-memcache php5-mcrypt",
   "unpack_disk_usage" => "19250814",
 
   "need_database" => "yes",

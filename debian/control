@@ -1,15 +1,15 @@
 Source: dtc-package-installer
 Section: admin
 Priority: optional
-Maintainer: D Meertins <packages@indivision.nl>
-Build-Depends: debhelper (>= 4), po-debconf
-Standards-Version: 3.7.2
+Maintainer: Thomas Goirand <thomas@goirand.fr>
+Build-Depends: debhelper (>= 5)
+Build-Depends-Indep: po-debconf
+Standards-Version: 3.7.3
 
 Package: dtc-package-installer
 Architecture: all
-Depends: dtc-postfix-courier | dtc
+Depends: dtc-common
 Description: Adds package installer apps to DTC
  This is a collection of apps that are done for
  the package installer of DTC.
  See http://www.gplhost.com/software-dtc.html for more details
- Package maintained by Indivision www.indivision.nl
