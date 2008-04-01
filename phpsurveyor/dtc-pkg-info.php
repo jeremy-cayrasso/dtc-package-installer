@@ -3,7 +3,7 @@
 $pkg_info = array(
   "name" => "phpSurveyor",
   "version" => "1.0stable",
-  "short_desc" => "PHPSurveyor contains everything you need for doing a surveyi, with grace.",
+  "short_desc" => "PHPSurveyor contains everything you need for doing a survey, with grace.",
   "long_desc" => "PHPSurveyor is a high powered, highly customizable
   Open Source Survey Management system. PHPSurveyor has a user-friendly interface, simple
   and straightforward administration panel, and helpful FAQ. Based on the powerful
