@@ -1,21 +1,17 @@
+dtc-package-installer (0.24.6-3) unstable; urgency=low
+
+  * New reworked depends.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Tue, 15 Apr 2008 16:46:41 +0800
+
 dtc-package-installer (0.24.6-2) unstable; urgency=low
-
-
 
   * All packages for dtc package installer upgraded to latest version
 
-
-
  -- D Meertins <packages@indivision.nl>  Mon, 22 Jan 2007 23:55:05 +0100
-
-
 
 dtc-package-installer (0.24.6-1) unstable; urgency=low
 
-
-
   * Initial release.
-
-
 
  -- Thomas Goirand <thomas@goirand.fr>  Mon, 13 Nov 2006 03:11:17 +0800
