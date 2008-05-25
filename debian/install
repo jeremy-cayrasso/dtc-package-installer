@@ -11,3 +11,4 @@ phpnuke usr/share/dtc/shared/package-installer
 smf usr/share/dtc/shared/package-installer
 wanewsletter usr/share/dtc/shared/package-installer
 spip usr/share/dtc/shared/package-installer
+wordpress usr/share/dtc/shared/package-installer
