@@ -1,45 +1,37 @@
 <?php
-/**
- * @package DTC
- * @version  $Id: dtc-pkg-info.php,v 1.3 2007/05/07 19:03:12 indivision Exp $
- * 
- */
+
 $pkg_info = array(
-  "name" => "Joomla",
-  "version" => "1.0.12",
-  "short_desc" => "A fully featured content management system",
-  "long_desc" => "Joomla is a high powered, fully scalable, and highly customizable
-  Open Source content management system. Joomla has a user-friendly interface, simple
-  and straightforward administration panel, and helpful FAQ. Based on the powerful
-  PHP server language and your choice of MySQL, MS-SQL, PostgreSQL or Access/ODBC
-  database servers, Joomla is the ideal free community solution for all web sites.",
-  "unpack_disk_usage" => "7826064",
+  "name" => "Joomla! CMS",
+  "version" => "1.5.9",
+  "short_desc" => "The worlds most popular content manage system to easily manage and update your website",
+  "long_desc" => "Joomla is an award-winning content management system (CMS), which enables you to build Web
+sites and powerful online applications. Many aspects, including its ease-of-use and extensibility,
+have made Joomla the most popular Web site software available. Best of all, Joomla is an open
+source solution that is freely available to everyone.",
+  "unpack_disk_usage" => "16470478",
 
   "need_database" => "yes",
   "sql_script" => "no",
 
-  "onthefly_post_script" => "no",
-  "post_script_url" => "installation/install2.php",
+  "onthefly_post_script" => "yes",
+  "post_script_url" => "installation/index.php",
 
   "remove_folder" => "yes",
   "remove_folder_path" => array("installation"),
-  
 
   "need_admin_email" => "yes",
   "need_admin_login" => "yes",
   "need_admin_pass" => "yes",
 
   "can_select_directory" => "yes",
-  "dtcpkg_directory" => "",
-  "directory" => "",
+  "directory" => "joomla159",//by defaul package comes without a folder - need to be sure of that!
 
-  "has_install_script" => "no",
-  "install_script_url" => "installation/install4.php",
+  "has_install_script" => "yes",
+  "install_script_url" => "install.php",
 
   "unpack_type" => "tar.gz",
-  "file" => "Joomla_1.0.12-Stable-Full_Package.tar.gz",
-  "resulting_dir" => "",
-  "renamedir_to" => "");
+  "file" => "Joomla_1.5.9-Stable-Full_Package.tar.gz",
+  "resulting_dir" => "joomla159",
+  "renamedir_to" => "joomla");
 
 ?>
-
