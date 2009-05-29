@@ -25,7 +25,7 @@ function do_package_install(){
   global $pkg_info;
   global $dtcpkg_db_login;
 
-  $package_installer_console .= "=> Starting Drupal Installer for Drupal 5.1<br>";
+  $package_installer_console .= "=> Starting Drupal Installer for Drupal 5.1<br />";
   $admin_path = getAdminPath($adm_login);
   $vhost_path = $admin_path."/".$edit_domain."/subdomains/".$_REQUEST["subdomain"]."/html";
   $hostname = $_REQUEST["subdomain"].".".$edit_domain;
@@ -35,17 +35,15 @@ function do_package_install(){
 
   //inserting the database dump
   $mysql_ver = mysql_get_server_info(); //i must add different db schemas for different mysql version
-  $package_installer_console .= "=> Inserting the Drupal 5.1 database schemas for you MySQL: ".$mysql_ver."<br>";
+  $package_installer_console .= "=> Inserting the Drupal 5.1 database schemas for you MySQL: ".$mysql_ver."<br />";
   if (ereg('^4.0', $mysql_ver)) {
-  $db_name = 'database.4.0.mysql';
+    $db_driver='mysql';
   }else{
-  $db_name = 'database.4.1.mysql';
+    $db_driver='mysqli';
   }
-  $database = "mysql -u ".$dtcpkg_db_login." -p".$_REQUEST["dtcpkg_db_pass"]." ".$_REQUEST["database_name"]." < ".$vhost_path."/".$_REQUEST["dtcpkg_directory"]."/database/".$db_name;
-  exec($database);
   
   //update the drupal config file
-  $package_installer_console .= "=> Changing Drupal Drupal 5.1 configuration file...<br>";
+  $package_installer_console .= "=> Changing Drupal Drupal 5.1 configuration file...<br />";
   if($_REQUEST["dtcpkg_directory"] == ""){
     $dest_dir = $vhost_path;
   }else{
@@ -56,25 +54,44 @@ function do_package_install(){
   $ar=file($fname);
   for ($k=0;$k<count($ar);$k++){
     if (ereg('^\$db_url.+', $ar[$k])) {
-    $ar[$k] = '$db_url = \'mysql://'.$dtcpkg_db_login.':'.$_REQUEST["dtcpkg_db_pass"].'@localhost/'.$_REQUEST["database_name"].'\';';
+    $ar[$k] = '$db_url = \''.$db_driver.'://'.$dtcpkg_db_login.':'.$_REQUEST["dtcpkg_db_pass"].'@localhost/'.$_REQUEST["database_name"]."';\n";
     }
   }
   
   $fp=fopen($fname,"w");
   if($fp == FALSE){
-    $package_installer_console .= "<font color=\"red\">Cannot open Drupal config file!</font><br>";
+    $package_installer_console .= "<font color=\"red\">Cannot open Drupal config file!</font><br />";
     return 1;
   }
   fwrite($fp,join("",$ar));
   fclose($fp);
   
-  if($_REQUEST["dtcpkg_directory"] == ""){
+  if($_REQUEST["dtcpkg_directory"] == "") {
     $dest_dir = $vhost_url;
   }else{
     $dest_dir = $vhost_url.$_REQUEST["dtcpkg_directory"];
   }
-  $package_installer_console .= "=> Installation OK!! Remember to go in <a href=\"".$dest_dir."\" target=\"blank\">your new Drupal site and create the first account!</a><br>";
-  
+
+  $data=array();
+  $data['profile']='default';
+  $url = $dest_dir."/".$pkg_info["install_script_url"];
+  $package_installer_console .= "=> Calling $url<br />";
+  $ret = HTTP_Get($url, $data, $url);
+
+  if ( is_numeric(strpos($ret,"Drupal already installed")) ) {
+    $package_installer_console .= "=> Warning: Drupal database tables already exist!<br />";
+    $package_installer_console .= "=> (You must manually drop the tables if desired.)<br />";
+  }
+    elseif ( ! is_numeric(strpos($ret,'Congratulations, Drupal has been successfully installed.')) )
+  {
+    $package_installer_console .= "=> Installation Failed! Check your parameters.<br />";
+    $package_installer_console .= $ret;
+    return 1;
+  }
+
+  $package_installer_console .= "=> Installation Success.<br />";
+  $package_installer_console .= "=> You need to go to <a href=\"".$dest_dir."\" target=\"blank\">your new Drupal site</a> to create the first account and complete the setup!<br />";
+
   return 0;     // Ok, no problem ! :)
 }
 

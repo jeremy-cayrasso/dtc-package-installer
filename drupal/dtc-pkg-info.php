@@ -11,7 +11,7 @@ $pkg_info = array(
   "sql_script" => "no",
 
   "onthefly_post_script" => "no",
-  "post_script_url" => "install/install.php",
+  "post_script_url" => "",
 
   "remove_folder" => "yes",
   "remove_folder_path" => array( "install", "contrib"),
