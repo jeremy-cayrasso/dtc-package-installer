@@ -27,7 +27,7 @@ set -e
 
 %{__rm} -rf %{buildroot}
 mkdir -p %{buildroot}
-cp -rfv drupal joomla oscommerce oscommerce-creloaded phpbb phpnuke phpsurveyor smf spip vtiger wanewsletter wordpress %{buildroot}
+cp -rfv nuked-klan-gamer nuked-klan-sp drupal joomla oscommerce oscommerce-creloaded phpbb phpnuke phpsurveyor smf spip vtiger wanewsletter wordpress %{buildroot}
 
 %pre
 
